@@ -1,0 +1,165 @@
+html {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    font-size: 110%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*
+li[data-jugador="messi"] {
+    background-color: blue;
+}
+*/
+
+
+/*
+    metodologia BEM
+    B: bloque
+    E: elemento
+    M: modificador
+
+    ejm:
+        persona = bloque
+        persona__brazo = elemento
+        persona__pie = elemento
+        persona__pie--izquierdo = modificador
+        persona__brazo--derecho = modificador
+        persona--oriental = modificador
+*/
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="sumbit"] {
+    -webkit-appearance: none;
+}
+
+.btn {
+    display: inline-block;
+    line-height: 1;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    font-size: .8rem;
+}
+
+.main-header {
+    text-align: center;
+    background: green;
+    color: white;
+    padding: 4em;
+}
+
+.main-header__titulo,
+.main-header__contenido {
+    margin: 0;
+}
+
+@media all and (min-width: 400px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    html {
+        font-size: 120%;
+    }
+}
+
+
+/*
+@media screen and (orientation: landscape) {
+    .main-header {
+        background: olive;
+    }
+}*/
+
+
+input[type="submit"]
+{
+    background: #bc2929;
+    padding: .5em;
+    border: none;
+    font-weight: bold;
+    font-size: .9em;
+    cursor: pointer;
+}
+
+.card {
+    position: relative;
+    height: 30vh;
+    width: 100%;
+    background-image: url(lima-small.jpg);
+    background-size: cover;
+    color: #222;
+    padding: .4em;
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+}
+
+.card__title {
+    margin: 0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.card__date {
+    font-size: .7rem;
+    margin: 0;
+    text-align: center;
+}
+
+@media all and (min-width: 28em) {
+    .card {
+        background-image: url(lima.jpg);
+        background-position: center;
+    }
+}
+
+.card__info {
+    position: absolute;
+    bottom: .4em;
+    left: .4em;
+    text-align: center;
+}
+
+.card__image {
+    display: block;
+}
+
+.card__maxt {
+    color: #37b948;
+    text-shadow: none;
+}
+
+.card__mint {
+    color: #bc2929;
+    text-shadow: none;
+}
+
+.card__temp {
+    display: block;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.card__maxt::before {
+    content: "Max: ";
+}
+
+.card__maxt::after {
+    content: "ºC";
+}
+
+.card__mint::before {
+    content: "Min: ";
+}
+
+.card__mint::after {
+    content: "ºC";
+}

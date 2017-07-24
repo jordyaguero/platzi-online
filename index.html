@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:title" content="Platzi">
+    <meta property="og:type" content="web-site">
+    <meta property="og:url" content="https://platzi.com/home/">
+    <meta property="og:description" content="Cursos de programacion , UX, Diseño, etc">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+    <ul>
+        <li data-jugador="ronaldo">ronaldo</li>
+        <li data-jugador="messi">messi</li>
+        <li data-jugador="guerrero">guerrero</li>
+    </ul>-->
+    <header class="main-header">
+        <h2 class="main-header__titulo">Platzi</h2>
+        <p class="main-header__contenido">Impartiendo conocimientos de la mejor calidad en el mercado, con mas de 100 cursos online siendo una de las mejores plataformas de educacion.
+        </p>
+    </header>
+
+    <div class="loader">Geolocalozando tu ubicacion, por favor espero un momento...</div>
+
+    <form action="" class="search">
+        <input class="search__text" data-input="cityAdd" placeholder="Agregar una nueva cuidad">
+        <input type="submit" data-button="add" class="search__btn btn" value="Añadir una nueva ciudad">
+        <button data-saved-cities class="btn search__btn">Ver Cuidades Guardadas</button>
+    </form>
+
+    <!-- Metodologia BEM -->
+    <main class="cards-group">
+        <template id="template--city">
+        <div class="card card--valencia">
+            <header class="card__header">
+                <h3 class="card__title" data-city></h3>
+                <h4 class="card__time" data-time></h4>
+            </header>
+            <div class="card__info">
+                <img data-icon class="card__image" src="" alt="">
+                <span data-temp="max" class="card__maxt"></span>
+                <span data-temp="min" class="card__mint"></span>
+                <span data-temp="current" class="card__temp"></span>
+            </div>
+        </div>
+    </template>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
